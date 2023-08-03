@@ -1,0 +1,77 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+    annotations:
+        metadata.weave.works/description: This is the source location for the Weave GitOps Dashboard's helm chart.
+    labels:
+        app.kubernetes.io/component: ui
+        app.kubernetes.io/created-by: weave-gitops-cli
+        app.kubernetes.io/name: weave-gitops-dashboard
+        app.kubernetes.io/part-of: weave-gitops
+    name: ww-gitops
+    namespace: flux-system
+spec:
+    interval: 1h0m0s
+    type: oci
+    url: oci://ghcr.io/weaveworks/charts
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1cmc4xg8fnd2rwplq8jwd7m0suym5zfdrqdwtwnw8qlv4cex2847s0a2muy
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAyV1dBTytQRE05MTRJUDRY
+            YnhNZk85Y2w1U0Yxa2xaTytuaS9scnFmTERFCkxmYlNkKzdqRW50REFwS3ZqR2pX
+            UzBUbE9WbWlqWTQrMGNzOG0xWUdTdUkKLS0tIHh6Y0J3QVp5OGRYQlE2WWtaZ0Jn
+            WnFGN3h1UERwOXFYME5KZ1I1M2w3MGcK9nWALBDTzo/2/78hHqm7ovNulC+mzM3G
+            C0O6QJErhDTqW6HB+VtmNRZajpYsfuM8se1GMG/ARfdsfs58joKPMw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-08-03T13:04:28Z"
+    mac: ENC[AES256_GCM,data:MV1QPb2AsaHnRN234AGc4RQOkD0hzWGoSinK9BRqn7D+LVljF1ND+UCjQ8r9xIujNmruMwerJFrFyuQ6ME3tBQQPZgMQacK8SrS96NuLAqNuVdtODh6SyXoIJSiyOOZZr1+VCe9qaFS7Td1imqzhS89BAkhdjSu7XSMgm26c1TE=,iv:d1ZZ9WZQyath1g6zIeRsfNzzf/ZQ8O5/7o6wRS0M6aM=,tag:XO1A0NhrybanLbLK+5MNxQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|passwordHash)$
+    version: 3.7.3
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+    annotations:
+        metadata.weave.works/description: This is the Weave GitOps Dashboard.  It provides a simple way to get insights into your GitOps workloads.
+    name: ww-gitops
+    namespace: flux-system
+spec:
+    chart:
+        spec:
+            chart: weave-gitops
+            sourceRef:
+                kind: HelmRepository
+                name: ww-gitops
+    interval: 1h0m0s
+    values:
+        adminUser:
+            create: true
+            passwordHash: ENC[AES256_GCM,data:gwHgBVrc1bpLQPwYoySQ5GV0IES9/6rAQDoWCsqbLuCkYcV8JiZHSFe5TGsYn2L9cL9P4c9X/SzIZgEY,iv:GAQ42ez2Mz+ovKPW0K5ZEZBxpKHSTaJqRi7YYKcp+dI=,tag:BOYBe5tjvSJXZwKqtXo21w==,type:str]
+            username: admin
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1cmc4xg8fnd2rwplq8jwd7m0suym5zfdrqdwtwnw8qlv4cex2847s0a2muy
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAyV1dBTytQRE05MTRJUDRY
+            YnhNZk85Y2w1U0Yxa2xaTytuaS9scnFmTERFCkxmYlNkKzdqRW50REFwS3ZqR2pX
+            UzBUbE9WbWlqWTQrMGNzOG0xWUdTdUkKLS0tIHh6Y0J3QVp5OGRYQlE2WWtaZ0Jn
+            WnFGN3h1UERwOXFYME5KZ1I1M2w3MGcK9nWALBDTzo/2/78hHqm7ovNulC+mzM3G
+            C0O6QJErhDTqW6HB+VtmNRZajpYsfuM8se1GMG/ARfdsfs58joKPMw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-08-03T13:04:28Z"
+    mac: ENC[AES256_GCM,data:MV1QPb2AsaHnRN234AGc4RQOkD0hzWGoSinK9BRqn7D+LVljF1ND+UCjQ8r9xIujNmruMwerJFrFyuQ6ME3tBQQPZgMQacK8SrS96NuLAqNuVdtODh6SyXoIJSiyOOZZr1+VCe9qaFS7Td1imqzhS89BAkhdjSu7XSMgm26c1TE=,iv:d1ZZ9WZQyath1g6zIeRsfNzzf/ZQ8O5/7o6wRS0M6aM=,tag:XO1A0NhrybanLbLK+5MNxQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|passwordHash)$
+    version: 3.7.3

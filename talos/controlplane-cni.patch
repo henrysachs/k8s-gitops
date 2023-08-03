@@ -1,0 +1,12 @@
+cluster:
+  allowSchedulingOnControlPlanes: true
+  network:
+    cni:
+      name: none
+  proxy:
+    disabled: true
+  apiServer:
+    certSANs:
+      - 192.168.2.10
+      - 93.196.162.69
+      - cluster.hachs.dev

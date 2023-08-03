@@ -1,0 +1,14 @@
+apiVersion: "cilium.io/v2alpha1"
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: "hachs-pool"
+spec:
+  cidrs:
+    - cidr: "192.168.2.11/32"
+    - cidr: "192.168.2.12/30"
+    - cidr: "192.168.2.16/28"
+    - cidr: "192.168.2.32/28"
+    - cidr: "192.168.2.48/31"
+  serviceSelector:
+    matchLabels:
+      lb-class: cilium

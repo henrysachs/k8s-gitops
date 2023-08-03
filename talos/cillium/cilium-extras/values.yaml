@@ -1,0 +1,6 @@
+# Default values for cilium-extras.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+externalIPs: false
+loadBalancerIPs: true

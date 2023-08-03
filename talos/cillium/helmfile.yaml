@@ -1,0 +1,25 @@
+repositories:
+  - name: cilium
+    url: https://helm.cilium.io/
+
+helmDefaults:
+  # verify the chart before upgrading (only works with packaged charts not directories) (default false)
+  verify: false
+  # wait for k8s resources via --wait. (default false)
+  wait: true
+  # time in seconds to wait for any individual Kubernetes operation (like Jobs for hooks, and waits on pod/pvc/svc/deployment readiness) (default 300)
+  timeout: 300
+  # forces resource update through delete/recreate if needed (default false)
+  force: false
+  # performs pods restart for the resource if applicable (default false)
+  recreatePods: false
+
+releases:
+  - name: cilium
+    namespace: kube-system
+    chart: cilium/cilium
+    values:
+      - values.yaml
+  - name: cilium-extras
+    namespace: kube-system
+    chart: ./cilium-extras
