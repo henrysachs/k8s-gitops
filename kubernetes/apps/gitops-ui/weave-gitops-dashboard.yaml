@@ -32,4 +32,4 @@ spec:
     interval: 1h0m0s
     valuesFrom:
         - kind: Secret
-          name: basic-auth-gitops-ui-7mdtt6b4dh
+          name: basic-auth-gitops-ui
