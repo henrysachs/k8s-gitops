@@ -30,6 +30,21 @@ spec:
                 kind: HelmRepository
                 name: ww-gitops
     interval: 1h0m0s
+    values: 
+      ingress:
+        enabled: true
+        className: "cilium"
+        annotations:
+            kubernetes.io/tls-acme: "true"
+        hosts:
+        - host: flux.k8s.hachs.dev
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+        tls:
+         - secretName: flux-web-ui
+           hosts:
+             - flux.k8s.hachs.dev  
     valuesFrom:
         - kind: Secret
           name: basic-auth-gitops-ui
