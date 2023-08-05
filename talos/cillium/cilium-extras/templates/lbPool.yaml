@@ -9,6 +9,3 @@ spec:
     - cidr: "192.168.2.16/28"
     - cidr: "192.168.2.32/28"
     - cidr: "192.168.2.48/31"
-  serviceSelector:
-    matchLabels:
-      lb-class: cilium
