@@ -1,17 +1,16 @@
-# Hachs Cluster Setup 
+# Hachs Cluster Setup
 
 Talos
     Grub
     custom patch files
-Cilium 
+Cilium
     Hubble
     LB IPAM
     Servicemesh
     Ingress
-    Quotas 
+    Quotas
 Age
 Flux
-
 
 ## Age Key Encryption
 
@@ -22,4 +21,6 @@ mkdir -p ~/.config/sops/age
 cp secrets/age-key.txt ~/.config/sops/age/keys.txt
 ```
 
+## Honorable Mention
 
+This all wouldn't be possible without this repo: <https://github.com/buroa/k8s-gitops> where I got a lot of inspiration and starting points from.
