@@ -5,13 +5,11 @@ metadata:
   name: cluster-apps-ingress-nginx
   namespace: flux-system
 spec:
-  dependsOn:
-    - name: cluster-apps-ingress-nginx-certificates
   path: ./kubernetes/apps/networking/ingress-nginx/app
   prune: true
   sourceRef:
     kind: GitRepository
-    name: k8s-gitops
+    name: flux-system
   wait: true
   interval: 30m
   retryInterval: 1m
