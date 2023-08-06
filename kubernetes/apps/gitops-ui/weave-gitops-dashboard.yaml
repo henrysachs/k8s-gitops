@@ -32,7 +32,7 @@ spec:
     interval: 1h0m0s
     values: 
       ingress:
-        enabled: false
+        enabled: true
         className: "nginx"
         annotations:
             ingress.cilium.io/loadbalancer-mode: shared
