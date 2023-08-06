@@ -706,16 +706,16 @@ image:
   useDigest: true
 imagePullSecrets: null
 ingressController:
-  default: true
+  default: false
   defaultSecretName: null
   defaultSecretNamespace: null
   enabled: true
-  enforceHttps: false
+  enforceHttps: true
   ingressLBAnnotationPrefixes:
   - service.beta.kubernetes.io
   - service.kubernetes.io
   - cloud.google.com
-  loadbalancerMode: dedicated
+  loadbalancerMode: shared
   secretsNamespace:
     create: true
     name: cilium-secrets

@@ -32,8 +32,8 @@ spec:
     interval: 1h0m0s
     values: 
       ingress:
-        enabled: false
-        className: "cilium"
+        enabled: true
+        className: "nginx"
         annotations:
             ingress.cilium.io/loadbalancer-mode: shared
             kubernetes.io/tls-acme: "true"
