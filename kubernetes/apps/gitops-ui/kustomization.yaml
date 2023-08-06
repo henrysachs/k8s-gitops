@@ -9,3 +9,4 @@ secretGenerator:
       - values.yaml
 configurations:
   - kustomizeconfig.yaml
+  - networkpolicy.yaml
