@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: openebs-jiva
+  namespace: networking
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: jiva
+      version: 3.2.0
+      sourceRef:
+        kind: HelmRepository
+        name: openebs-jiva-charts
+        namespace: flux-system
+  maxHistory: 2
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+  
