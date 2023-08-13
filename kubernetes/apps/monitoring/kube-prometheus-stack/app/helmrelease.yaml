@@ -1,0 +1,153 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: monitoring
+spec:
+  interval: 30m
+  timeout: 15m
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      version: 48.3.1
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community-charts
+        namespace: flux-system
+  maxHistory: 2
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+    cleanPrometheusOperatorObjectNames: true
+    alertmanager:
+      ingress:
+        enabled: true
+        ingressClassName: nginx
+        annotations:
+          hajimari.io/appName: Alertmanager
+          hajimari.io/icon: mdi:alert-decagram-outline
+        hosts:
+          - &am-host am.${PUBLIC_DOMAIN}
+        paths:
+          - /
+        tls:
+          - hosts:
+              - *am-host
+      alertmanagerSpec:
+        replicas: 1
+        useExistingSecret: true
+        configSecret: alertmanager-secret
+        podAntiAffinity: hard
+        storage:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: openebs-jiva-csi-default
+              resources:
+                requests:
+                  storage: 1Gi
+    grafana:
+      enabled: false
+      forceDeployDashboards: true
+      sidecar:
+        dashboards:
+          multicluster:
+            etcd:
+              enabled: true
+    kubeStateMetrics:
+      enabled: true
+    kube-state-metrics:
+      metricLabelsAllowlist:
+        - "pods=[*]"
+        - "deployments=[*]"
+        - "persistentvolumeclaims=[*]"
+      prometheus:
+        monitor:
+          enabled: true
+          relabelings:
+            - action: replace
+              regex: (.*)
+              replacement: $1
+              sourceLabels: ["__meta_kubernetes_pod_node_name"]
+              targetLabel: kubernetes_node
+    kubelet:
+      enabled: true
+      serviceMonitor:
+        metricRelabelings:
+          - action: replace
+            sourceLabels: ["node"]
+            targetLabel: instance
+    kubeApiServer:
+      enabled: true
+    kubeControllerManager:
+      enabled: true
+      endpoints: &cp
+        - 192.168.2.10
+    kubeEtcd:
+      enabled: true
+      endpoints: *cp
+      service:
+        enabled: true
+        port: 2381
+        targetPort: 2381
+    kubeProxy:
+      enabled: false
+      endpoints: *cp
+    kubeScheduler:
+      enabled: true
+      endpoints: *cp
+    prometheus:
+      ingress:
+        enabled: true
+        ingressClassName: nginx
+        annotations:
+          hajimari.io/appName: Prometheus
+          hajimari.io/icon: simple-icons:prometheus
+        hosts:
+          - &prometheus-host prometheus.${PUBLIC_DOMAIN}
+        paths:
+          - /
+        tls:
+          - hosts:
+              - *prometheus-host
+      thanosService:
+        enabled: false
+      thanosServiceMonitor:
+        enabled: false
+      prometheusSpec:
+        replicas: 1
+        replicaExternalLabelName: __replica__
+        ruleSelectorNilUsesHelmValues: false
+        serviceMonitorSelectorNilUsesHelmValues: false
+        podMonitorSelectorNilUsesHelmValues: false
+        probeSelectorNilUsesHelmValues: false
+        enableAdminAPI: true
+        walCompression: true
+        enableFeatures:
+          - auto-gomaxprocs
+          - memory-snapshot-on-shutdown
+          - new-service-discovery-manager
+        retention: 7d
+        retentionSize: 15GB
+        storageSpec:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: openebs-jiva-csi-default
+              resources:
+                requests:
+                  storage: 20Gi
+        resources:
+          requests:
+            cpu: 150m
+            memory: 500Mi
+          limits:
+            memory: 7000Mi

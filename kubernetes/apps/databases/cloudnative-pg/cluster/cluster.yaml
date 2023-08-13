@@ -1,0 +1,24 @@
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: postgres
+  namespace: databases
+  annotations:
+    kyverno.io/ignore: "true"
+spec:
+  instances: 3
+  imageName: ghcr.io/cloudnative-pg/postgresql:15.2
+  inheritedMetadata:
+    labels:
+      kube-image-keeper.enix.io/image-caching-policy: ignore
+  primaryUpdateStrategy: unsupervised
+  storage:
+    size: 5Gi
+    storageClass: openebs-jiva-csi-default
+  postgresql:
+    parameters:
+      max_connections: "600"
+      shared_buffers: 512MB
+  monitoring:
+    enablePodMonitor: false
