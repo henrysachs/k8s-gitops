@@ -1,13 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server
+  name: teamspeak-app
   namespace: teamspeak
+  labels:
+    app: teamspeak
+    release: teamspeak-app
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: teamspeak
+      release: teamspeak-app
   template:
     spec:
       volumes:
