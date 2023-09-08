@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+  namespace: teamspeak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teamspeak
+  template:
+    spec:
+      volumes:
+        - name: teamspeak-data
+          emptyDir: {}
+      containers:
+        - name: teamspeak-server
+          image: teamspeak:3.13.7
+          ports:
+            - containerPort: 9987
+              protocol: UDP
+          env:
+            - name: TS3SERVER_LICENSE
+              value: accept
+            - name: TS3SERVER_DB_PLUGIN
+              value: ts3db_mariadb
+            - name: TS3SERVER_DB_SQLCREATEPATH
+              value: create_mariadb
+            - name: TS3SERVER_DB_USER
+              value: root
+            - name: TS3SERVER_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mariadb-config
+                  key: auth.rootPassword
+            - name: TS3SERVER_DB_NAME
+              value: teamspeak
+            - name: TS3SERVER_DB_HOST
+              value: mariadb
+          resources:
+            limits:
+              cpu: 250m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+          volumeMounts:
+            - name: teamspeak-data
+              mountPath: /var/ts3server/
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600

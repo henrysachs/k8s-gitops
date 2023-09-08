@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: teamspeak
+resources:
+  - ./helmrelease.yaml
+secretGenerator:
+  - name: mariadb-config
+    namespace: flux-system
+    files:
+      - values.yaml
+configurations:
+  - kustomizeconfig.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: teamspeak-mariadb
+      app.kubernetes.io/instance: teamspeak-mariadb
