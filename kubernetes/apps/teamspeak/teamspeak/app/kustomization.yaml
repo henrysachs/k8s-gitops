@@ -4,6 +4,8 @@ kind: Kustomization
 namespace: teamspeak
 resources:
   - ./deployment.yaml
+  - ./service.yaml
+  - ./service-tcp.yaml
 labels:
   - pairs:
       app.kubernetes.io/name: teamspeak
