@@ -28,6 +28,11 @@ spec:
             - containerPort: 9987
               protocol: UDP
           env:
+            - name: TS3SERVER_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mariadb-config
+                  key: auth.rootPassword
             - name: TS3SERVER_LICENSE
               value: accept
             - name: TS3SERVER_DB_PLUGIN
@@ -36,11 +41,6 @@ spec:
               value: create_mariadb
             - name: TS3SERVER_DB_USER
               value: root
-            - name: TS3SERVER_DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mariadb-config
-                  key: auth.rootPassword
             - name: TS3SERVER_DB_NAME
               value: teamspeak
             - name: TS3SERVER_DB_HOST
