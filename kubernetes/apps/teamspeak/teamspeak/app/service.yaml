@@ -10,7 +10,7 @@ metadata:
     meta.helm.sh/release-name: teamspeak-app
     meta.helm.sh/release-namespace: teamspeak
     ingress.cilium.io/loadbalancer-mode: shared
-    io.cilium/lb-ipam-ips: 192.168.2.14
+    io.cilium/lb-ipam-ips: 192.168.2.15
 spec:
   ports:
     - name: teamspeak-voice
