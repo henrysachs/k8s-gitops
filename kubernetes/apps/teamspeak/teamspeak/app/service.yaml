@@ -23,8 +23,3 @@ spec:
   type: LoadBalancer
   sessionAffinity: None
   externalTrafficPolicy: Cluster
-  ipFamilies:
-    - IPv4
-  ipFamilyPolicy: SingleStack
-  allocateLoadBalancerNodePorts: true
-  internalTrafficPolicy: Cluster
