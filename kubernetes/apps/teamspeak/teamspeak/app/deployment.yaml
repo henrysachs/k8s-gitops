@@ -31,8 +31,8 @@ spec:
             - name: TS3SERVER_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mariadb-config
-                  key: auth.rootPassword
+                  name: teamspeak-mariadb
+                  key: mariadb-root-password
             - name: TS3SERVER_LICENSE
               value: accept
             - name: TS3SERVER_DB_PLUGIN
