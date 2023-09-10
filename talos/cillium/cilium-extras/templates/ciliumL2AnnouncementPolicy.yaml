@@ -3,10 +3,9 @@ kind: CiliumL2AnnouncementPolicy
 metadata:
   name: policy1
 spec:
-  # nodeSelector:
-  #   matchExpressions:
-  #     - key: node-role.kubernetes.io/control-plane
-  #       operator: DoesNotExist
+  serviceSelector:
+    matchLabels:
+      io.kubernetes.service.name: ingress-nginx-controller
   interfaces:
   - ^eth[0-9]+
   externalIPs: false
