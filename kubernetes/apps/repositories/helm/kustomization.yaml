@@ -22,6 +22,7 @@ resources:
   - ./kubernetes-sigs-descheduler-charts.yaml
   - ./kyverno-charts.yaml
   - ./lwolf-charts.yaml
+  - ./metallb-charts.yaml
   - ./metrics-server-charts.yaml
   - ./node-feature-discovery-charts.yaml
   - ./openebs-jiva-charts.yaml
