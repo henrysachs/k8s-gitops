@@ -9,4 +9,4 @@ spec:
   interfaces:
   - ^eth[0-9]+
   externalIPs: false
-  loadBalancerIPs: true
+  loadBalancerIPs: false

@@ -709,7 +709,7 @@ ingressController:
   default: false
   defaultSecretName: null
   defaultSecretNamespace: null
-  enabled: true
+  enabled: false
   enforceHttps: true
   ingressLBAnnotationPrefixes:
   - service.beta.kubernetes.io
