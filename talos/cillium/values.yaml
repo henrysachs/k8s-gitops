@@ -770,7 +770,7 @@ l2NeighDiscovery:
   enabled: true
   refreshPeriod: 30s
 l2announcements:
-  enabled: true
+  enabled: false
   leaseDuration: 3s
   leaseRenewDeadline: 1s
   leaseRetryPeriod: 200ms
