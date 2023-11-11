@@ -18,3 +18,23 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: stammkneipe-dev-operator
+  namespace: flux-system
+spec:
+  path: ./kubernetes/apps/stammkneipe-dev/stammkneipe-dev/gitlab-runner-operator
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  wait: true
+  interval: 30m
+  retryInterval: 1m
+  timeout: 5m
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
