@@ -14,6 +14,7 @@ resources:
   - ./external-dns-charts.yaml
   - ./external-secrets-charts.yaml
   - ./fairwinds-charts.yaml
+  - ./gitlab-charts.yaml
   - ./grafana-charts.yaml
   - ./hajimari-charts.yaml
   - ./ingress-nginx-charts.yaml
