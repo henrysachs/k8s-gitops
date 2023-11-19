@@ -123,7 +123,7 @@ sessionServer:
     #   - 1.2.3.4/32
 ## For RBAC support:
 rbac:
-    create: false
+    create: true
     ## Define list of rules to be added to the rbac role permissions.
     ## Each rule supports the keys:
     ## - apiGroups: default "" (indicates the core API group) if missing or empty.
@@ -134,15 +134,15 @@ rbac:
     ##
     ## ref: https://docs.gitlab.com/runner/executors/kubernetes.html#configure-runner-api-permissions
     ##
-    rules: []
-    # - resources: ["configmaps", "events", "pods", "pods/attach", "pods/exec", "secrets", "services"]
-    #   verbs: ["get", "list", "watch", "create", "patch", "update", "delete"]
-    # - apiGroups: [""]
-    #   resources: ["pods/exec"]
-    #   verbs: ["create", "patch", "delete"]
-    # - apiGroups: [""]
-    #   resources: ["pods/log"]
-    #   verbs: ["get"]
+    rules:
+    - resources: ["configmaps", "events", "pods", "pods/attach", "pods/exec", "secrets", "services"]
+      verbs: ["get", "list", "watch", "create", "patch", "update", "delete"]
+    - apiGroups: [""]
+      resources: ["pods/exec"]
+      verbs: ["create", "patch", "delete"]
+    - apiGroups: [""]
+      resources: ["pods/log"]
+      verbs: ["get"]
     ## Run the gitlab-bastion container with the ability to deploy/manage containers of jobs
     ## cluster-wide or only within namespace
     clusterWideAccess: false
