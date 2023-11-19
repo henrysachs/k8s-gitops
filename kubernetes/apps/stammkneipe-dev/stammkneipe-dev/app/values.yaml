@@ -388,7 +388,7 @@ securityContext:
 ## ref: https://kubernetes.io/docs/concepts/security/pod-security-standards/
 ##
 podSecurityContext:
-    runAsUser: 100
+    runAsUser: 0
     # runAsGroup: 65533
     fsGroup: 65533
     # supplementalGroups: [65533]
