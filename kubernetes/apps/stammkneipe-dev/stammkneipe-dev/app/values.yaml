@@ -379,11 +379,11 @@ runners:
 securityContext:
     allowPrivilegeEscalation: false
     readOnlyRootFilesystem: false
-    runAsNonRoot: true
-    privileged: false
-    capabilities:
-        drop:
-            - ALL
+    runAsNonRoot: false
+    privileged: true
+    # capabilities:
+    #     drop:
+    #         - ALL
 ## Configure securitycontext valid for the whole pod
 ## ref: https://kubernetes.io/docs/concepts/security/pod-security-standards/
 ##
