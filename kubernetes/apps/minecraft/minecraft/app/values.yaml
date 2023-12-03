@@ -227,13 +227,14 @@ minecraftServer:
     # DEPRECATED: use top-level rconServiceAnnotations instead
     serviceAnnotations:
         metallb.universe.tf/allow-shared-ip: nginx
+        metallb.universe.tf/loadBalancerIPs: 192.168.2.49
     serviceType: LoadBalancer
     ## Set the port used if the serviceType is NodePort
     nodePort: null
     # Set the external port of the service, usefull when using the LoadBalancer service type
     servicePort: 25565
     clusterIP: null
-    loadBalancerIP: null
+    loadBalancerIP: 192.168.2.49
     # loadBalancerSourceRanges: []
     ## Set the externalTrafficPolicy in the Service to either Cluster or Local
     # externalTrafficPolicy: Cluster
@@ -491,8 +492,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T12:56:52Z"
-    mac: ENC[AES256_GCM,data:UqADlztxtUw8UP6Y1NUo5IO5ryBv7+mfN5TmxRe4doLx3u6DgS6qjZlKwvqaf2OAHT+3my5HEw9IkbhbDnzqFxrTc6U7PTlpBsa0AGchbe2/Itx9qTo0wtzYXVxGnYrQPS9U7/M50FRUv/X1WsHRXZQF8S71nBrMbN5unLQNUqA=,iv:HZIjAkq0jh0ul4Vgc7EAv6Hr82D2Fk7x3OXNsxha0LU=,tag:CeoyUUAnC6OxVMan3NbsOQ==,type:str]
+    lastmodified: "2023-12-03T13:01:08Z"
+    mac: ENC[AES256_GCM,data:idgGe+nFhdMSL+r+IeAouqc4BR+5qeAyYTQ4Oyi4PGBTL+WmYYPbAqFLZiz+SkVmQKKI4+JR/BNRv/wIlR1B1phY6m3bIzcTxMBkbfS/dIOD+rT7M7KKiy+sgspnbjQIgzozYQ3+2ClR91AASKN/gPWmEqQT8qceyDlrg135jIE=,iv:wA824cqa7Ef+FQ/MLZL9jqTsVCfQwmSagzp3UWAPz3c=,tag:Z8YjR8Ri2ioPLJvObSEjaA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
