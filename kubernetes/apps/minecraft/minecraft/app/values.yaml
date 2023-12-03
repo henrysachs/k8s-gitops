@@ -14,7 +14,7 @@ replicaCount: 1
 resources:
     requests:
         memory: 10384M
-        cpu: 3000m
+        cpu: 3500m
 lifecycle:
     postStart: []
     preStop: []
@@ -138,7 +138,7 @@ minecraftServer:
     # If type is set to FTBA and a modpack is set, this sets the version to run
     ftbModpackVersionId: null
     # If type is set to CURSEFORGE, this sets the server mod to run. Can also provide url to curseforge package.
-    cfServerMod: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.0/mc-modpack-0.4.0.zip
+    cfServerMod: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.1/mc-modpack-0.4.1.zip
     # Set to true if running Feed The Beast and get an error like "unable to launch forgemodloader"
     ftbLegacyJavaFixer: default
     # One of: peaceful, easy, normal, and hard
@@ -198,7 +198,7 @@ minecraftServer:
     # force re-download of server file
     forceReDownload: false
     # If set, the modpack at this URL will be downloaded at startup
-    downloadModpackUrl: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.0/mc-modpack-0.4.0.zip
+    downloadModpackUrl: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.1/mc-modpack-0.4.1.zip
     # If true, old versions of downloaded mods will be replaced with new ones from downloadModpackUrl
     removeOldMods: false
     # A list of VanillaTweaks Share Codes to download. (https://vanillatweaks.net/share#wUq1iz => "wUq1iz")
@@ -215,7 +215,7 @@ minecraftServer:
     # Require public key to be signed by Mojang to join
     enforceSecureProfile: default
     # If you adjust this, you may need to adjust resources.requests above to match.
-    memory: 8000M
+    memory: 10384M
     # General JVM options to be passed to the Minecraft server invocation
     jvmOpts: ""
     # Options like -X that need to proceed general JVM options
@@ -491,8 +491,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T14:21:01Z"
-    mac: ENC[AES256_GCM,data:uI8gQAvmOtPAp1KTjAfimciyVIgUkNPD8hTjSszBuJC2hdVI2QDuoh8evAf877x25VODugegOl3n9RhSmXGGA5w7nzx07O2V6bNQlXpw3Kyak/Cc5qE9W64OjK5zyJ4ep7Qg3494FWIpdop8Km44bhS5VYnwye/6zJPXQ5hXirA=,iv:TtRIjddSOp0qanCq5Wv+rJKD+CVSkUV9vlEavQ/xzgo=,tag:394cyS+w5DdvCC4r7lmK4A==,type:str]
+    lastmodified: "2023-12-03T14:28:04Z"
+    mac: ENC[AES256_GCM,data:hWQrrEU2JGrCFDVTUKTHX2b/fstMKV4qwjpqLcg4WWCdfF9E1tvpI640fKJIEdO0QLrpYF5geyjPuPMiZ9UCpaQDjXqSbchbPuSCYmD3WHklZLQDlb4Wf/MmDeM4Pn4ca57SkXxxQWNHT8fNk4MPFD3zyzKLGmv2xurbEkCCH4g=,iv:Q8rG/wyXrfXe0OCxKErbrBD9pEYwRGJC+HNJgbDL8EU=,tag:08igpZhZ55ukgKncnszxWw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
