@@ -27,7 +27,7 @@ workloadAsStatefulSet: true
 # upgrade strategy type, depending on workload type:
 # - for Deployment sets strategy: Recreate or RollingUpdate
 # - for StatefulSet sets updateStrategy: OnDelete or RollingUpdate
-strategyType: OnDelete
+strategyType: RollingUpdate
 nodeSelector: {}
 tolerations: []
 affinity: {}
@@ -491,8 +491,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T14:28:04Z"
-    mac: ENC[AES256_GCM,data:hWQrrEU2JGrCFDVTUKTHX2b/fstMKV4qwjpqLcg4WWCdfF9E1tvpI640fKJIEdO0QLrpYF5geyjPuPMiZ9UCpaQDjXqSbchbPuSCYmD3WHklZLQDlb4Wf/MmDeM4Pn4ca57SkXxxQWNHT8fNk4MPFD3zyzKLGmv2xurbEkCCH4g=,iv:Q8rG/wyXrfXe0OCxKErbrBD9pEYwRGJC+HNJgbDL8EU=,tag:08igpZhZ55ukgKncnszxWw==,type:str]
+    lastmodified: "2023-12-03T14:28:28Z"
+    mac: ENC[AES256_GCM,data:bi/Op2rwYYXyglrXUuurBF3HfQboq1kcO2UuTfGi8GR7fM8wdCZqFh4SjxFr45a5hI/XyyTIcZU+lYfycqpgBShYMlySD246go6Hn0t1/bJ5NglSRQpr/FqAwM0q5vLZEClyQ8W5GkxH9oFwHfFXkLDDoFos3KWicOZfuE48KpY=,iv:nuppwkfB+tk7R+/CPt7Tk0BmhJiOzXhheaUoSnrKghg=,tag:54JohAOuGoLELqEGG8m0Vw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
