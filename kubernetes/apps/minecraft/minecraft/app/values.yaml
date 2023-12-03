@@ -271,9 +271,9 @@ minecraftServer:
         filenameMatcher: ""
         # List of project slugs or IDs to be excluded from modpack, useful if mod is incorrectly marked as server side
         excludeMods:
-            - "4441351"
-            - "4733393"
-            - "4441631"
+            - "783522"
+            - "859262"
+            - "636540"
         # List of project slugs or IDs to be included in modpack, useful if mod is incorrectly marked as client side only
         includeMods: []
         # Path to file with rules for including and excluding mods. If null - use bundled file, if empty - disable it
@@ -487,8 +487,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T11:13:10Z"
-    mac: ENC[AES256_GCM,data:HPVsekQ4kqYh8bQIvpVZ2OOvUs+Oh5klwbPFUnEI+qc5+39+fu/1qhzjwbkrqK6EjrIsJk49XgQskAb6XZlxSO6y6gSbXEClkwWwCTblheF/osEJbeU4/UGvwFEokArGdjT9wSv8KNqqqLyoupdBKAKUj6PdrpNmPw8FjWBU1jE=,iv:Gc7BQS4v5lw+t/CVs8noGjdOHPjZJF5yrg72F78uBQ8=,tag:x97EJcoDPnIVksm/PgWFSQ==,type:str]
+    lastmodified: "2023-12-03T11:16:24Z"
+    mac: ENC[AES256_GCM,data:3/4Ok2WXnxzH3s2PexfaVypb+F9sHGH33dLaDlRgtnGARj+M4ZclNj/zkgE8hYLgY7AUcBVkrAFcNT+rNe2BUJ9mA1mF18+vGy9ZEfYfHe1heTznlCWeqjRjD9vUjwHEmfV+l1BpcgiQUrg+1R4MdWNrpiBMiDvfGY4Oai512VU=,iv:xX3dTZreIrYf6nPuOaoYzZUA+ql6U7BRnDa42VPRE9k=,tag:qPHQvvA+FXpRBscVWD4D3A==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
