@@ -261,7 +261,7 @@ minecraftServer:
             secretKey: cf-api-key
         # Link to modpack in general or a specific file
         # NOTE: In case of specific file - do not point at server file
-        pageUrl: https://legacy.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3
+        pageUrl: https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3
         # Unique id of modpack, can be used instead of url
         slug: ""
         # Id used to specify which exact modpack file needs to be downloaded
@@ -484,8 +484,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T10:43:56Z"
-    mac: ENC[AES256_GCM,data:9+eaTKgmuKUKw+DD5kNSHUe5BcjVopMr6g4rsp/JkVvncOXcAxEz0N3L2jyudsg+RTONgyiSdzzRhTg99lawwzgMfrqniqcV+cDiX3QnudrOZJAFASaeANihvprKDQEHMhAVSUL2C98T5InL7mSTRgRQB8/7lsAoe2IOovmB6NQ=,iv:rWn5r8jnGfdjNjY2WgPmJ4//b6EdQTFji2TylmJ+4Ac=,tag:Nyycjs8HLQiFaCm+hWyaqA==,type:str]
+    lastmodified: "2023-12-03T10:47:26Z"
+    mac: ENC[AES256_GCM,data:FdLNFswceQUIoR9N3SdokwG/O/EAHvLY/z5ivZTMUNXOAv9VVWgAje5OfImfGQPui70TT4TXPUNQIn4caoGgnzwmRrpLXfbd9bLk6Ikv7lmetWWtypRjN0VReLtV7o5oSqCtz02E50bpKDdVbIK+WGrtY1g4zxcgMQ+k7p4Tx5s=,iv:Rd/bsskiOAP17nOZlJVcjk13k/xTtGxIhwra07bRULQ=,tag:/U7us3rOI9GNXq5ckFZuAQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
