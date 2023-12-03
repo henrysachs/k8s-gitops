@@ -256,7 +256,7 @@ minecraftServer:
     autoCurseForge:
         # CurseForge API key obtained from developer console
         apiKey:
-            key: $2a$10$GWd868YYXYWkznbRohEGo.ADBhMqAfngXl/IopI6mASbab3G69cSG
+            key: $2a$10$t01Kh7M7m.QGxd0xL0LiJ.Q5lRhjiMP9.sob.TEpa5R2QqaLzazTC
             existingSecret: ""
             secretKey: cf-api-key
         # Link to modpack in general or a specific file
@@ -487,8 +487,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T11:16:24Z"
-    mac: ENC[AES256_GCM,data:3/4Ok2WXnxzH3s2PexfaVypb+F9sHGH33dLaDlRgtnGARj+M4ZclNj/zkgE8hYLgY7AUcBVkrAFcNT+rNe2BUJ9mA1mF18+vGy9ZEfYfHe1heTznlCWeqjRjD9vUjwHEmfV+l1BpcgiQUrg+1R4MdWNrpiBMiDvfGY4Oai512VU=,iv:xX3dTZreIrYf6nPuOaoYzZUA+ql6U7BRnDa42VPRE9k=,tag:qPHQvvA+FXpRBscVWD4D3A==,type:str]
+    lastmodified: "2023-12-03T11:18:55Z"
+    mac: ENC[AES256_GCM,data:/T+qSLUHpLsmXt7c1MNT13NJqk+LAX0fmjeZIEUmt5EKg6RBHT0+YiApVoMEzMB99NSAshlqprP95okFvxuUc6/YPJZa5VWpHXw/ovh0KaGnveYm/6uJWnY/JmxHdtkTLZQWeaNYihjVRXElUwBAE+EgMxSsMU+SdzDF3dH+GFc=,iv:WnRXNIIbiSCljcEXbbRRgdPkSYAcoo+pkrmx2M7HUH4=,tag:9JtP+DTAbcYTTyYcjPR1MQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
