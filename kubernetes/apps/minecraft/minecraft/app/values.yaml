@@ -138,7 +138,7 @@ minecraftServer:
     # If type is set to FTBA and a modpack is set, this sets the version to run
     ftbModpackVersionId: null
     # If type is set to CURSEFORGE, this sets the server mod to run. Can also provide url to curseforge package.
-    cfServerMod: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.1/mc-modpack-0.4.1.zip
+    cfServerMod: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.2/mc-modpack-0.4.2.zip
     # Set to true if running Feed The Beast and get an error like "unable to launch forgemodloader"
     ftbLegacyJavaFixer: default
     # One of: peaceful, easy, normal, and hard
@@ -198,7 +198,7 @@ minecraftServer:
     # force re-download of server file
     forceReDownload: false
     # If set, the modpack at this URL will be downloaded at startup
-    downloadModpackUrl: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.1/mc-modpack-0.4.1.zip
+    downloadModpackUrl: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.4.2/mc-modpack-0.4.2.zip
     # If true, old versions of downloaded mods will be replaced with new ones from downloadModpackUrl
     removeOldMods: false
     # A list of VanillaTweaks Share Codes to download. (https://vanillatweaks.net/share#wUq1iz => "wUq1iz")
@@ -491,8 +491,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T14:31:37Z"
-    mac: ENC[AES256_GCM,data:yFHFSWRuYMRmWOPMimo+GrZO4LDw+6PU95KyPrBuQosrr1l4oJu/t2Ipo1N1PbMbWTm40a+EBCMiXhDSyEWHLsfgJwxQFcoO8MvYDGkh4LEGSrP8ZG/M6fAIQ4aM1RDloLl2/RUPuFgyqFEnz/XuvwFsox8wt58FlpLgqvutc1A=,iv:Pd6Md6PKsixmN1nRbrl85C4hNoH7/L3+x30Uc/jSvoA=,tag:rbqqb2rgbMq4M4aQbPIx3A==,type:str]
+    lastmodified: "2023-12-03T14:40:10Z"
+    mac: ENC[AES256_GCM,data:fErya12XavH0BDoX6tFtZBXDlYVE0L/WoTjp0wRRlHIVFF/KDDphwyKZCJ6dCKzGeEAEqSIkGw1AfkEKbueLHV4+VeHyw4Zc5/ZoUFWi9+5sceWy3KRsH6M5jbonISsLdVasmC8Krm7xtpr0hv3Ydk19ZKNzBJRwDkXth4j9cNo=,iv:PPC1bTehwPcmYC08mgC34r6Bk9WR0rmdTStoyB+YE8o=,tag:3p83RE0S8LNCE1nGvj9+Vw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
