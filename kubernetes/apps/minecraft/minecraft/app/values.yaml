@@ -225,8 +225,9 @@ minecraftServer:
     # see https://github.com/itzg/docker-minecraft-server#server-configuration
     overrideServerProperties: false
     # DEPRECATED: use top-level rconServiceAnnotations instead
-    serviceAnnotations: {}
-    serviceType: ClusterIP
+    serviceAnnotations:
+        metallb.universe.tf/allow-shared-ip: nginx
+    serviceType: LoadBalancer
     ## Set the port used if the serviceType is NodePort
     nodePort: null
     # Set the external port of the service, usefull when using the LoadBalancer service type
@@ -490,8 +491,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T12:16:54Z"
-    mac: ENC[AES256_GCM,data:hWlo55sBKg0CsSMSLUkxp3RS+MGKWZhJQ0Cs1FiGBNNouKjoiEQzZBOy8h3lXMx1evIcgs2MS8LtYPYQ2dp+LsDO+szksWU79tOWqUEMUEdvs+zvYcWKWAGkK915NkD/nwn140dp62ypsaYSlHTnVtyGzukWU744xl1I7fNfTmI=,iv:s7I/l+uwhscPZz1xC72rgYC8fQb/KDsTlfaTUEfGAKs=,tag:E+TWSIm/Pe6DjGK49WlFmQ==,type:str]
+    lastmodified: "2023-12-03T12:17:37Z"
+    mac: ENC[AES256_GCM,data:tEnUptRNjDvcUit8u4Q22BrUHLcY+uJYyUhupumraRfNVhl5un6ZG4MLn/HXFXez880t4TzusBnTH0a8eXFeeLpZhpZEHDZizYHeIR63d3SXIjftAxLW0UqZLGvBs9Bvq4GIr9riw8P5qth55BTn5xSVBxSJg399tyvk4hObDLY=,iv:d1k24nyRMSdxsACF4lARhWqNQ4lF6vKYsqzP2EsGtF8=,tag:TewzR6q6IRxZ12oYsy/xsQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
