@@ -13,7 +13,7 @@ replicaCount: 1
 ##
 resources:
     requests:
-        memory: 8Gi
+        memory: 10384M
         cpu: 3000m
 lifecycle:
     postStart: []
@@ -491,8 +491,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T12:51:04Z"
-    mac: ENC[AES256_GCM,data:wq8bvLU0ebbIpsnN8Y/S2pQ+WGDa0eGd9bCRUeCdYkp52THFHOuzupifEEzZL4z2ktevLaX5De9k5pwD25HjdLXfeh8otb/rz+XuNrYNJIgMhInEkN1g4bOgg36v3XcuHckpLo3JhtjXdARceA4HdUp+69hw7+EmgQIZ7TSS1AE=,iv:TLrkRjZmL/9az7jneXW7Uc1bth8f4Yz2am63PdpzOko=,tag:14MpeSDJ0GeX+Nd8MxC5Tg==,type:str]
+    lastmodified: "2023-12-03T12:56:52Z"
+    mac: ENC[AES256_GCM,data:UqADlztxtUw8UP6Y1NUo5IO5ryBv7+mfN5TmxRe4doLx3u6DgS6qjZlKwvqaf2OAHT+3my5HEw9IkbhbDnzqFxrTc6U7PTlpBsa0AGchbe2/Itx9qTo0wtzYXVxGnYrQPS9U7/M50FRUv/X1WsHRXZQF8S71nBrMbN5unLQNUqA=,iv:HZIjAkq0jh0ul4Vgc7EAv6Hr82D2Fk7x3OXNsxha0LU=,tag:CeoyUUAnC6OxVMan3NbsOQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
