@@ -138,7 +138,7 @@ minecraftServer:
     # If type is set to FTBA and a modpack is set, this sets the version to run
     ftbModpackVersionId: null
     # If type is set to CURSEFORGE, this sets the server mod to run. Can also provide url to curseforge package.
-    cfServerMod: null
+    cfServerMod: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.3.0/mc-modpack-0.3.0.zip
     # Set to true if running Feed The Beast and get an error like "unable to launch forgemodloader"
     ftbLegacyJavaFixer: default
     # One of: peaceful, easy, normal, and hard
@@ -198,7 +198,7 @@ minecraftServer:
     # force re-download of server file
     forceReDownload: false
     # If set, the modpack at this URL will be downloaded at startup
-    downloadModpackUrl: null
+    downloadModpackUrl: https://gitlab.com/robin-patrick/gaming/mc-modpack/-/archive/0.3.0/mc-modpack-0.3.0.zip
     # If true, old versions of downloaded mods will be replaced with new ones from downloadModpackUrl
     removeOldMods: false
     # A list of VanillaTweaks Share Codes to download. (https://vanillatweaks.net/share#wUq1iz => "wUq1iz")
@@ -490,8 +490,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T11:54:59Z"
-    mac: ENC[AES256_GCM,data:poxuCfoOKc+PVGkH6U5xQkwF31lOk/ZGlrfqZHRfD9QklAtEqNf8WyhJtrwEgSw3t2s5gucCz4kMOR6i69T1crGc0OTHMxHu9hT5NBl1L1W2Qr9x9w+024Rmh1jAQJZixEAdz9C1yfMqmrVHjxy6gUJyZlVNzTEeoawCWmeCMQI=,iv:nn/yBca9ZdtPLYavDblgbb6iVuQ2ivfJVDFvtVfwYNQ=,tag:M/ELylMKThzuPu7gsnkfmg==,type:str]
+    lastmodified: "2023-12-03T12:16:54Z"
+    mac: ENC[AES256_GCM,data:hWlo55sBKg0CsSMSLUkxp3RS+MGKWZhJQ0Cs1FiGBNNouKjoiEQzZBOy8h3lXMx1evIcgs2MS8LtYPYQ2dp+LsDO+szksWU79tOWqUEMUEdvs+zvYcWKWAGkK915NkD/nwn140dp62ypsaYSlHTnVtyGzukWU744xl1I7fNfTmI=,iv:s7I/l+uwhscPZz1xC72rgYC8fQb/KDsTlfaTUEfGAKs=,tag:E+TWSIm/Pe6DjGK49WlFmQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
