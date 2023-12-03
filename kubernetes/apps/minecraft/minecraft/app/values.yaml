@@ -120,7 +120,7 @@ minecraftServer:
     # One of: LATEST, SNAPSHOT, or a specific version (ie: "1.7.9").
     version: 1.19.2
     # This can be one of "VANILLA", "FORGE", "SPIGOT", "BUKKIT", "PAPER", "FTBA", "SPONGEVANILLA", "CURSEFORGE"
-    type: CURSEFORGE
+    type: AUTO_CURSEFORGE
     # If type is set to FORGE, this sets the version; this is ignored if forgeInstallerUrl is set
     forgeVersion: null
     # If type is set to SPONGEVANILLA, this sets the version
@@ -138,7 +138,7 @@ minecraftServer:
     # If type is set to FTBA and a modpack is set, this sets the version to run
     ftbModpackVersionId: null
     # If type is set to CURSEFORGE, this sets the server mod to run. Can also provide url to curseforge package.
-    cfServerMod: https://legacy.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3/download/4889399
+    cfServerMod: null
     # Set to true if running Feed The Beast and get an error like "unable to launch forgemodloader"
     ftbLegacyJavaFixer: default
     # One of: peaceful, easy, normal, and hard
@@ -256,12 +256,12 @@ minecraftServer:
     autoCurseForge:
         # CurseForge API key obtained from developer console
         apiKey:
-            key: CHANGEME!
+            key: $2a$10$GWd868YYXYWkznbRohEGo.ADBhMqAfngXl/IopI6mASbab3G69cSG
             existingSecret: ""
             secretKey: cf-api-key
         # Link to modpack in general or a specific file
         # NOTE: In case of specific file - do not point at server file
-        pageUrl: ""
+        pageUrl: https://legacy.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3
         # Unique id of modpack, can be used instead of url
         slug: ""
         # Id used to specify which exact modpack file needs to be downloaded
@@ -484,8 +484,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T10:39:23Z"
-    mac: ENC[AES256_GCM,data:774QejdzyAfkjd9LVF3hph/L9tCOfR5CISBXz1JkT9F4lo74AZzUibc0y9nbUpAvIhZ5Apg+Ua5Gm9r467+qpPYvU8EIRNTt3mcJOKGOo6CkAhCQKtG6TzDWGam7p+UljHMSueXHWmZVhodqc7qOtxX1RVF27cfntpQuNhtH3DU=,iv:rreIdQaRlfA4gJU6NUl15eAT0I2KPPWNnQDu60bn9g4=,tag:y30VrTpcUcpb0catFYPlYw==,type:str]
+    lastmodified: "2023-12-03T10:43:56Z"
+    mac: ENC[AES256_GCM,data:9+eaTKgmuKUKw+DD5kNSHUe5BcjVopMr6g4rsp/JkVvncOXcAxEz0N3L2jyudsg+RTONgyiSdzzRhTg99lawwzgMfrqniqcV+cDiX3QnudrOZJAFASaeANihvprKDQEHMhAVSUL2C98T5InL7mSTRgRQB8/7lsAoe2IOovmB6NQ=,iv:rWn5r8jnGfdjNjY2WgPmJ4//b6EdQTFji2TylmJ+4Ac=,tag:Nyycjs8HLQiFaCm+hWyaqA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
