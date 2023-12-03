@@ -118,7 +118,7 @@ minecraftServer:
     # This must be overridden, since we can't accept this for the user.
     eula: "TRUE"
     # One of: LATEST, SNAPSHOT, or a specific version (ie: "1.7.9").
-    version: 1.19.2
+    version: 1.20.1
     # This can be one of "VANILLA", "FORGE", "SPIGOT", "BUKKIT", "PAPER", "FTBA", "SPONGEVANILLA", "CURSEFORGE"
     type: AUTO_CURSEFORGE
     # If type is set to FORGE, this sets the version; this is ignored if forgeInstallerUrl is set
@@ -261,7 +261,7 @@ minecraftServer:
             secretKey: cf-api-key
         # Link to modpack in general or a specific file
         # NOTE: In case of specific file - do not point at server file
-        pageUrl: https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3
+        pageUrl: https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4
         # Unique id of modpack, can be used instead of url
         slug: ""
         # Id used to specify which exact modpack file needs to be downloaded
@@ -489,8 +489,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T11:28:59Z"
-    mac: ENC[AES256_GCM,data:orb1guzy2cLt2ky6SqG0bZJoKYUQR1lLpPyg6jk9xVbbpNIujgajJBPZGls5FFveNe0NGSUB6G2iMINp+gPjfaF6ZMGjErehxKLn3MUP2eeRqiRcTNnIJ9Mkzykqn3BxhlnUyZeUI0b3Zp1Id9Q0v27R3K1N9T1RudOj7Eh5Pck=,iv:eNjYugqFIfUVSP9mSXsOxx1mUMGQ0jx1NimcUG99rcU=,tag:Cj/mQMFnnDk4hPbl7YpZgA==,type:str]
+    lastmodified: "2023-12-03T11:33:32Z"
+    mac: ENC[AES256_GCM,data:Rmd/6IUhzOzQagTvCCqD2uO3n44JjOcFwPBzzB9DYJKbucJ1Ero11n2VqHzusUWJXMtZh+KqB6Fj2CoqR6LqOsKyX/EKNCAhscpinfs+ZNunYpEVNvtl2l7EawK4abE+aj4nbYfrVa2wdXitw73UgRdQXnQYDPWmCdTOLUIgyR0=,iv:bAXzrezl3+RoIHqC0t0J8MXL8R+ML3uhNuyXfNUmco4=,tag:AQ/nnhP8MFr1Wu4Z5pPJ1Q==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
