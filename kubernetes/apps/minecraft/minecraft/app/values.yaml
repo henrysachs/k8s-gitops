@@ -138,7 +138,7 @@ minecraftServer:
     # If type is set to FTBA and a modpack is set, this sets the version to run
     ftbModpackVersionId: null
     # If type is set to CURSEFORGE, this sets the server mod to run. Can also provide url to curseforge package.
-    cfServerMod: https://legacy.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3/files/4889399
+    cfServerMod: https://legacy.curseforge.com/minecraft/modpacks/better-mc-forge-bmc3/download/4889399
     # Set to true if running Feed The Beast and get an error like "unable to launch forgemodloader"
     ftbLegacyJavaFixer: default
     # One of: peaceful, easy, normal, and hard
@@ -484,8 +484,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T10:26:59Z"
-    mac: ENC[AES256_GCM,data:CbbC2/+HIug2/EXQk61Eri5NKvcJmcx0pGvMi+O4ZpS4G+rONGXHDTpLWS071XsFGTkpHlyT4fYetW7KwUaNAQTvpJi9pnTUj24YQ9K0NqXTZsawltdzisJetxs6sGYEtG4fqLw5QnbVTEwm62+0FvRtwLcTbuW9trar8mpx4kY=,iv:cJj+toHXAxb7koH0QZRtNVT1ZTgT3jp8pVs2KxzOoXY=,tag:vve5Vx2dopOK6P14jbL56A==,type:str]
+    lastmodified: "2023-12-03T10:39:23Z"
+    mac: ENC[AES256_GCM,data:774QejdzyAfkjd9LVF3hph/L9tCOfR5CISBXz1JkT9F4lo74AZzUibc0y9nbUpAvIhZ5Apg+Ua5Gm9r467+qpPYvU8EIRNTt3mcJOKGOo6CkAhCQKtG6TzDWGam7p+UljHMSueXHWmZVhodqc7qOtxX1RVF27cfntpQuNhtH3DU=,iv:rreIdQaRlfA4gJU6NUl15eAT0I2KPPWNnQDu60bn9g4=,tag:y30VrTpcUcpb0catFYPlYw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
