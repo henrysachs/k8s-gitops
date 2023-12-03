@@ -232,7 +232,7 @@ minecraftServer:
     ## Set the port used if the serviceType is NodePort
     nodePort: null
     # Set the external port of the service, usefull when using the LoadBalancer service type
-    servicePort: 25565
+    servicePort: 31603
     clusterIP: null
     loadBalancerIP: 192.168.2.50
     # loadBalancerSourceRanges: []
@@ -492,8 +492,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T13:03:05Z"
-    mac: ENC[AES256_GCM,data:BFN6tbBFB3WM8/5kXfBJw0JJF7iDSV+NtZfrvJF4bDNT3Dv7RLxj8cw71O3gCWm3In5LWpccjcUfvG8LqKqNT0BKzC7IwMOqxhI8QRCfIYWa/7YeXYAl8hXFxeE8ao5zIh8nVUWphiHhicNlAioJZyTn2F3CLyYRmfzExHsr48o=,iv:CccvSeEcI7FdTEfPPF9gRO9eu6CtVcyTFi9GuVkwMqo=,tag:aHl1U9h0EzLDuEvFGEcecg==,type:str]
+    lastmodified: "2023-12-03T13:05:41Z"
+    mac: ENC[AES256_GCM,data:sj9OIYQhg5QvBDa1UZiF0MONsHJO93p16CF9/9AzFdV/TJdgWz8RAd3ctYfUJUjxJeRlStZiW71XPY377ay2mqvUYfN4Xwlif9jUXH/NfRoi3PBoDCWd/diboi1jPCTmJnOP3u8iUzsxoG4FBUiHHgqdyD10/hZdBFxppk1SjrE=,iv:19uQEaWhAKU1dPEz2FQDigqhULGJX314l3gapvfZkD4=,tag:hsjsKmOFjkvdJxNIML7wUw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
