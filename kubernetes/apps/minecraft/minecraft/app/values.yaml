@@ -126,7 +126,7 @@ minecraftServer:
     # If type is set to SPONGEVANILLA, this sets the version
     spongeVersion: null
     # If type is set to FORGE, this sets the URL to download the Forge installer
-    forgeInstallerUrl: https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.2.16/forge-1.20.1-47.2.16-installer.jar
+    forgeInstallerUrl: https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.20.1-47.2.6/forge-1.20.1-47.2.6-installer.jar
     # If type is set to BUKKIT, this sets the URL to download the Bukkit package
     bukkitDownloadUrl: null
     # If type is set to SPIGOT, this sets the URL to download the Spigot package
@@ -491,8 +491,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T12:46:01Z"
-    mac: ENC[AES256_GCM,data:pvfn8ctcQ6VgazDSeMQ2yOBbOURAc514f2OgZbkfJPd9C61JawbqSFPBX3HavUuXUvkgb+i+swwJ3AJTysIEYc65ssCSerCVMnlDmVtB5Ux88iHTLOSibm5xGQvzGxTFHU8mw0NiBcV40JA9dYBH6Jp9ub6zBYrCzUsE5O0uo4I=,iv:Rd7nUXlicv4KUp5vxE3pusSzyXcCMLURPYvOWSJokmQ=,tag:/ynUI2CiY5RZvifZmUDyfg==,type:str]
+    lastmodified: "2023-12-03T12:51:04Z"
+    mac: ENC[AES256_GCM,data:wq8bvLU0ebbIpsnN8Y/S2pQ+WGDa0eGd9bCRUeCdYkp52THFHOuzupifEEzZL4z2ktevLaX5De9k5pwD25HjdLXfeh8otb/rz+XuNrYNJIgMhInEkN1g4bOgg36v3XcuHckpLo3JhtjXdARceA4HdUp+69hw7+EmgQIZ7TSS1AE=,iv:TLrkRjZmL/9az7jneXW7Uc1bth8f4Yz2am63PdpzOko=,tag:14MpeSDJ0GeX+Nd8MxC5Tg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
