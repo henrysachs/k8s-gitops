@@ -49,7 +49,7 @@ securityContext:
 livenessProbe:
     command:
         - mc-health
-    initialDelaySeconds: 30
+    initialDelaySeconds: 90
     periodSeconds: 5
     failureThreshold: 20
     successThreshold: 1
@@ -57,7 +57,7 @@ livenessProbe:
 readinessProbe:
     command:
         - mc-health
-    initialDelaySeconds: 30
+    initialDelaySeconds: 90
     periodSeconds: 5
     failureThreshold: 20
     successThreshold: 1
@@ -66,7 +66,7 @@ startupProbe:
     command:
         - mc-health
     enabled: false
-    failureThreshold: 30
+    failureThreshold: 45
     periodSeconds: 10
 # initContainers:
 #   - name: do-something
@@ -487,8 +487,8 @@ sops:
             U3gwVFUzSmdzVW81ZDcweE95Y1NSSXcKEolky1SUsX0+KI5ekyzz6S/RqHGjdhzO
             MxD/ILCgWKSFuouvA2SMyRNMBOPvWctgoU+W7kJl4CZJAJaqMl7rWg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-03T10:54:12Z"
-    mac: ENC[AES256_GCM,data:lrLXv5tYUfMJbv9Cuv/D40HmIu0TE3zjxZzKsBT26ohmuRw3uz1q1e4UN2Lr1oPeZOvDHX/qHrnLUUStTDVIhlVooeHnjYF55eQRXnGxZuIhxnm4toloqHB11cPrQbcPyTVIhZdgjxkTAjZn41uYRyozS9jmt12wIN2FMlrD3xI=,iv:Tcskv2UV9vVsGJVI/9H2DJnqTvAiZSRl5XI/5vDl+QI=,tag:2k4ga/36KJt866djxhvDpQ==,type:str]
+    lastmodified: "2023-12-03T11:13:10Z"
+    mac: ENC[AES256_GCM,data:HPVsekQ4kqYh8bQIvpVZ2OOvUs+Oh5klwbPFUnEI+qc5+39+fu/1qhzjwbkrqK6EjrIsJk49XgQskAb6XZlxSO6y6gSbXEClkwWwCTblheF/osEJbeU4/UGvwFEokArGdjT9wSv8KNqqqLyoupdBKAKUj6PdrpNmPw8FjWBU1jE=,iv:Gc7BQS4v5lw+t/CVs8noGjdOHPjZJF5yrg72F78uBQ8=,tag:x97EJcoDPnIVksm/PgWFSQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|passwordHash|password|rootPassword)$
     version: 3.8.1
